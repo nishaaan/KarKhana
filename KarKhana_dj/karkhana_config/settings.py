@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    # local apps
+    'karkhana_app.apps.KarkhanaAppConfig'
 ]
 
 MIDDLEWARE = [
