@@ -2,12 +2,12 @@
 
 import 'package:karkhana/Packages/Packages.dart';
 
-class googleLoginButton extends StatelessWidget {
+class googleButton extends StatelessWidget {
   final String image;
   final String text;
   final VoidCallback onClick;
   final Color butColor;
-  const googleLoginButton({
+  const googleButton({
     Key? key,
     required this.image,
     required this.text,
@@ -39,7 +39,7 @@ class googleLoginButton extends StatelessWidget {
                 )
               ],
               border: Border.all(
-                color: ColorsOn.textColor,
+                color: Colours.textColor,
               ),
               borderRadius: BorderRadius.circular(
                 16,
@@ -64,7 +64,7 @@ class googleLoginButton extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     fontFamily: 'ProximaNova',
                     fontStyle: FontStyle.normal,
-                    color: ColorsOn.backgroundColor,
+                    color: Colours.backgroundColor,
                   ),
                 ),
               ],

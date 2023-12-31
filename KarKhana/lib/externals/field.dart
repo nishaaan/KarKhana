@@ -58,22 +58,22 @@ class _NtextFieldState extends State<NtextField> {
               )
             : null,
         hintText: widget.name,
-        hintStyle: const TextStyle(color: ColorsOn.textColor),
+        hintStyle: const TextStyle(color: Colours.textColor),
         contentPadding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 15.w),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: ColorsOn.textColor),
+          borderSide: const BorderSide(color: Colours.textColor),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: ColorsOn.secondaryColor),
+          borderSide: const BorderSide(color: Colours.secondaryColor),
           borderRadius: BorderRadius.circular(10),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: ColorsOn.errorColor),
+          borderSide: const BorderSide(color: Colours.errorColor),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: ColorsOn.secondaryColor),
+          borderSide: const BorderSide(color: Colours.secondaryColor),
           borderRadius: BorderRadius.circular(10),
         ),
       ),

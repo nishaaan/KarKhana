@@ -1,7 +1,7 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, camel_case_types
 import 'package:karkhana/Packages/Packages.dart';
 
-class NormalText extends StatelessWidget {
+class smallText extends StatelessWidget {
   Color? color;
   final String text;
   double size;
@@ -9,9 +9,9 @@ class NormalText extends StatelessWidget {
   TextOverflow overFlow;
   TextDecoration? decoration;
   int maxline;
-  NormalText({
+  smallText({
     Key? key,
-    this.color = ColorsOn.textColor2,
+    this.color = Colours.textColor2,
     required this.text,
     this.size = 14,
     this.height = 1.2,

@@ -26,10 +26,10 @@ class TextButtons extends StatelessWidget {
         SizedBox(
           width: 20.w,
         ),
-        NormalText(
+        smallText(
           text: label,
           size: 18,
-          color: ColorsOn.textColor2,
+          color: Colours.textColor2,
         )
       ]),
     );

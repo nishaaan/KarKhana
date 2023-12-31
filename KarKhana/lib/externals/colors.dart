@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
-class ColorsOn {
-  const ColorsOn(Color color);
+class Colours {
+  const Colours(Color color);
   static const Color backgroundColor = Color(0xFFFCFCFC);
   static const Color textColor = Color.fromARGB(255, 0, 0, 0);
   static const Color smallColor = Color(0xFFccc7c5);

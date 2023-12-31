@@ -1,16 +1,17 @@
+// ignore_for_file: must_be_immutable, file_names
+
 import 'package:karkhana/Packages/Packages.dart';
 
-// ignore: must_be_immutable
-class BigText extends StatelessWidget {
-  Color? color;
+class LargeText extends StatelessWidget {
   final String text;
-  double size;
+  Color? color;
   TextOverflow overFlow;
+  double size;
   int maxline;
-  BigText({
+  LargeText({
     Key? key,
-    this.color = ColorsOn.textColor2,
     required this.text,
+    this.color = Colours.textColor2,
     this.size = 20,
     this.overFlow = TextOverflow.ellipsis,
     this.maxline = 1,

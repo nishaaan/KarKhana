@@ -21,8 +21,8 @@ class smallContainer extends StatefulWidget {
     required this.discount,
     required this.frontLabel,
     required this.newLabel,
-    this.smallboxColor = ColorsOn.errorColor,
-    this.discountColor = ColorsOn.greenColor,
+    this.smallboxColor = Colours.errorColor,
+    this.discountColor = Colours.greenColor,
     required this.smallboxWidght,
     this.couponID,
     this.iscart = false,
@@ -47,7 +47,7 @@ class _smallContainerState extends State<smallContainer> {
             height: (height * 0.17).h,
             width: (width * 0.8).w,
             decoration: BoxDecoration(
-              color: ColorsOn.backgroundColor,
+              color: Colours.backgroundColor,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
@@ -67,17 +67,17 @@ class _smallContainerState extends State<smallContainer> {
                     children: [
                       widget.iscart
                           ? const Text("")
-                          : BigText(
+                          : LargeText(
                               text: "Coupon ID: " + "${widget.couponID}",
                               size: 14,
-                              color: ColorsOn.greyColor,
+                              color: Colours.greyColor,
                             ),
-                      BigText(
+                      LargeText(
                         text: "${widget.dealTitle}",
                         maxline: 1,
                         size: 14,
                       ),
-                      NormalText(text: "By " + "${widget.businessName}"),
+                      smallText(text: "By " + "${widget.businessName}"),
                       SizedBox(
                         height: 4.h,
                       ),
@@ -90,10 +90,10 @@ class _smallContainerState extends State<smallContainer> {
                                 widget.smallboxWidght)
                             .w,
                         child: Center(
-                          child: NormalText(
+                          child: smallText(
                             text:
                                 "${widget.frontLabel}: " + "${widget.newLabel}",
-                            color: ColorsOn.backgroundColor,
+                            color: Colours.backgroundColor,
                             size: 16,
                           ),
                         ),
@@ -105,12 +105,12 @@ class _smallContainerState extends State<smallContainer> {
                   padding: EdgeInsets.only(left: 5.w),
                   child: Column(
                     children: [
-                      BigText(
+                      LargeText(
                         text: "${widget.discount}" + "%",
                         color: widget.discountColor,
                         size: 30,
                       ),
-                      BigText(
+                      LargeText(
                         text: "discount",
                         size: 12,
                       ),

@@ -5,9 +5,9 @@ import 'package:karkhana/Packages/Packages.dart';
 class ButtonContainer extends StatelessWidget {
   final String text;
   final VoidCallback onClick;
+  final Color textColor;
   final Color butColor;
   final Color butborderColor;
-  final Color textColor;
   final int width;
   final int height;
   const ButtonContainer({
@@ -16,7 +16,7 @@ class ButtonContainer extends StatelessWidget {
     required this.text,
     required this.butColor,
     required this.onClick,
-    this.textColor = ColorsOn.backgroundColor,
+    this.textColor = Colours.backgroundColor,
     this.width = 300,
     this.height = 16,
   }) : super(key: key);
@@ -50,7 +50,7 @@ class ButtonContainer extends StatelessWidget {
             ),
             color: butColor,
           ),
-          child: BigText(
+          child: LargeText(
             text: text,
             color: textColor,
             size: 16,

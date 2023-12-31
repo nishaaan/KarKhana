@@ -3,18 +3,18 @@ import 'package:karkhana/Packages/Packages.dart';
 
 class ButtonContainerIcon extends StatelessWidget {
   final String text;
+  IconData? icon;
   final VoidCallback onClick;
   final Color butColor;
-  final Color butborderColor;
-  IconData? icon;
   final Color textColor;
+  final Color butborderColor;
   ButtonContainerIcon(
       {Key? key,
       required this.butborderColor,
       required this.text,
       required this.butColor,
       required this.onClick,
-      this.textColor = ColorsOn.backgroundColor,
+      this.textColor = Colours.backgroundColor,
       this.icon})
       : super(key: key);
 
@@ -53,12 +53,12 @@ class ButtonContainerIcon extends StatelessWidget {
             children: <Widget>[
               Icon(
                 icon,
-                color: ColorsOn.backgroundColor,
+                color: Colours.backgroundColor,
               ),
               SizedBox(
                 width: 8.w,
               ),
-              BigText(
+              LargeText(
                 text: text,
                 color: textColor,
                 size: 16,
