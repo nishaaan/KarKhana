@@ -32,8 +32,18 @@ export 'package:geolocator/geolocator.dart';
 //API
 export 'package:karkhana/API/auth_api.dart';
 
-//KarKhana Pages
+//User signin/signup pages
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/sign_up.dart';
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/emailconfirm.dart';
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/log_in.dart';
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
+
+// User HomePage
+export 'package:karkhana/usersPages/customerPages/HomePages/location.dart';
+
+// Settings Pages
+export 'package:karkhana/usersPages/customerPages/HomePages/settings/Editprofile.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/settings/aboutus.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/settings/contactus.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/settings/feedback.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/settings/userSettings.dart';
