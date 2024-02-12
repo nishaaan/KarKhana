@@ -127,8 +127,6 @@ class CouponActive(models.Model):
     )
     coupon_Status = models.CharField(max_length = 20, choices= Status, default= 'Active')
 
-
-
     def __str__(self):
         return self.Customer_Name
 
