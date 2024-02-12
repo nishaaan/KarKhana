@@ -9,10 +9,12 @@ export 'package:flutter/src/widgets/framework.dart';
 export 'package:flutter_svg/svg.dart';
 export 'package:hive_flutter/hive_flutter.dart';
 export 'package:lottie/lottie.dart';
+export 'package:page_transition/page_transition.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
 
 //KarKhana externals and models and validations
 export 'package:karkhana/models/user_models.dart';
-export 'package:karkhana/models/user_block.dart';
+export 'package:karkhana/models/user_cubit.dart';
 export 'package:karkhana/externals/colors.dart';
 export 'package:karkhana/externals/largeText.dart';
 export 'package:karkhana/externals/smalltext.dart';
@@ -24,9 +26,14 @@ export 'package:karkhana/externals/googleButton.dart';
 export 'package:karkhana/externals/field.dart';
 export 'package:karkhana/externals/constant.dart';
 export 'package:karkhana/Validations/vaidateField.dart';
+export 'package:geocoding/geocoding.dart';
+export 'package:geolocator/geolocator.dart';
 
 //API
 export 'package:karkhana/API/auth_api.dart';
 
 //KarKhana Pages
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/sign_up.dart';
+export 'package:karkhana/usersPages/customerPages/signIn/SignUp/emailconfirm.dart';
+export 'package:karkhana/usersPages/customerPages/signIn/SignUp/log_in.dart';
+export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
