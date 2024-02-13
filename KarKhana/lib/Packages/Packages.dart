@@ -11,6 +11,9 @@ export 'package:hive_flutter/hive_flutter.dart';
 export 'package:lottie/lottie.dart';
 export 'package:page_transition/page_transition.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:flutter_rating_bar/flutter_rating_bar.dart';
+export 'package:geocoding/geocoding.dart';
+export 'package:geolocator/geolocator.dart';
 
 //KarKhana externals and models and validations
 export 'package:karkhana/models/user_models.dart';
@@ -26,8 +29,6 @@ export 'package:karkhana/externals/googleButton.dart';
 export 'package:karkhana/externals/field.dart';
 export 'package:karkhana/externals/constant.dart';
 export 'package:karkhana/Validations/vaidateField.dart';
-export 'package:geocoding/geocoding.dart';
-export 'package:geolocator/geolocator.dart';
 
 //API
 export 'package:karkhana/API/auth_api.dart';
@@ -47,3 +48,10 @@ export 'package:karkhana/usersPages/customerPages/HomePages/settings/aboutus.dar
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/contactus.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/feedback.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/userSettings.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/DealsContainer.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/dealInside.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/nearYouDeal.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/reviewContainer.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/reviewRating.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/scrollDealDetail.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/vendorDetailinside.dart';
