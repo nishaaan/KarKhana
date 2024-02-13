@@ -32,6 +32,7 @@ export 'package:karkhana/Validations/vaidateField.dart';
 
 //API
 export 'package:karkhana/API/auth_api.dart';
+export 'package:karkhana/API/GoogleAPI.dart';
 
 //User signin/signup pages
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/sign_up.dart';
@@ -41,6 +42,7 @@ export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
 
 // User HomePage
 export 'package:karkhana/usersPages/customerPages/HomePages/location.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/BottomNavigationbar.dart';
 
 // Settings Pages
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/Editprofile.dart';
