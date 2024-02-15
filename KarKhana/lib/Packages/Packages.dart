@@ -43,6 +43,7 @@ export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
 // User HomePage
 export 'package:karkhana/usersPages/customerPages/HomePages/location.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/BottomNavigationbar.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/categoryContainer.dart';
 
 // Settings Pages
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/Editprofile.dart';
@@ -64,3 +65,9 @@ export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/vend
 export 'package:karkhana/usersPages/customerPages/HomePages/Cart/cart.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Cart/CartDeals.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Cart/paymentPage.dart';
+
+//Category Pages
+export 'package:karkhana/usersPages/customerPages/HomePages/Category/carService.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Category/Food.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Category/Health.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Category/swimming.dart';
