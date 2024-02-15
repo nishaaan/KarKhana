@@ -84,3 +84,8 @@ export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/activeCoup
 export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/previousCouponMain.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/Purchases.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/searchPurchase.dart';
+
+//Vendor Login/Register Pages
+export 'package:karkhana/usersPages/vendorPages/Login_Register/VSignup.dart';
+export 'package:karkhana/usersPages/vendorPages/Login_Register/Vlogin.dart';
+export 'package:karkhana/usersPages/vendorPages/Login_Register/forgetpw.dart';
