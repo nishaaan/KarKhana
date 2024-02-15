@@ -50,6 +50,8 @@ export 'package:karkhana/usersPages/customerPages/HomePages/settings/aboutus.dar
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/contactus.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/feedback.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/userSettings.dart';
+
+//Deals Pages
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/DealsContainer.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/dealInside.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/nearYouDeal.dart';
@@ -57,3 +59,8 @@ export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/revi
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/reviewRating.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/scrollDealDetail.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Deal containers/vendorDetailinside.dart';
+
+//Cart Pages
+export 'package:karkhana/usersPages/customerPages/HomePages/Cart/cart.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Cart/CartDeals.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Cart/paymentPage.dart';

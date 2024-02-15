@@ -21,7 +21,7 @@ class _btmNavigationBarState extends State<btmNavigationBar> {
 
     List<Widget> screens = <Widget>[
       // HomePage(),
-      // AddToCart(),
+      AddToCart(),
       // purchases(),
       UserSettings(),
     ];
