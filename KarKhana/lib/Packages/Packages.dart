@@ -77,3 +77,10 @@ export 'package:karkhana/usersPages/customerPages/HomePages/Category/carService.
 export 'package:karkhana/usersPages/customerPages/HomePages/Category/Food.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Category/Health.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/Category/swimming.dart';
+
+//Purchases Pages
+export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/activeCouponDeal.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/activeCouponMain.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/previousCouponMain.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/Purchases.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/searchPurchase.dart';

@@ -56,6 +56,8 @@ dependencies:
   google_sign_in: ^6.1.6
   khalti_flutter: ^3.0.0
   internet_connection_checker: ^1.0.0+1
+  screenshot: ^2.1.0
+  share_plus: ^7.2.2
 
 dev_dependencies:
   flutter_test:

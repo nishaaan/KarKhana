@@ -22,7 +22,7 @@ class _btmNavigationBarState extends State<btmNavigationBar> {
     List<Widget> screens = <Widget>[
       HomePage(),
       AddToCart(),
-      // purchases(),
+      purchases(),
       UserSettings(),
     ];
     List<IconData> listOfIcons = [
