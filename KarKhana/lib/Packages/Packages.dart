@@ -40,7 +40,11 @@ export 'package:karkhana/usersPages/customerPages/signIn/SignUp/emailconfirm.dar
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/log_in.dart';
 export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
 
-// User HomePage
+//User Screens
+export 'package:karkhana/usersPages/ScreenAsk.dart';
+export 'package:karkhana/usersPages/splashScreen.dart';
+
+// Customer HomePage
 export 'package:karkhana/usersPages/customerPages/HomePages/location.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/BottomNavigationbar.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/categoryContainer.dart';

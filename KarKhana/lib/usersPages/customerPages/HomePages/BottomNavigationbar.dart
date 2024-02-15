@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, file_names
+// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, file_names, prefer_const_constructors
 
 import 'package:karkhana/Packages/Packages.dart';
 // import 'package:brisk_deals/user_screens/Customer/Homescreens/settings/userSettings.dart';
@@ -20,7 +20,7 @@ class _btmNavigationBarState extends State<btmNavigationBar> {
     Size size = MediaQuery.of(context).size;
 
     List<Widget> screens = <Widget>[
-      // HomePage(),
+      HomePage(),
       AddToCart(),
       // purchases(),
       UserSettings(),
