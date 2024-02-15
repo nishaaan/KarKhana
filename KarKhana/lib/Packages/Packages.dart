@@ -44,6 +44,7 @@ export 'package:karkhana/usersPages/customerPages/signIn/SignUp/forgetpw.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/location.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/BottomNavigationbar.dart';
 export 'package:karkhana/usersPages/customerPages/HomePages/categoryContainer.dart';
+export 'package:karkhana/usersPages/customerPages/HomePages/search.dart';
 
 // Settings Pages
 export 'package:karkhana/usersPages/customerPages/HomePages/settings/Editprofile.dart';
