@@ -89,3 +89,15 @@ export 'package:karkhana/usersPages/customerPages/HomePages/Purchases/searchPurc
 export 'package:karkhana/usersPages/vendorPages/Login_Register/VSignup.dart';
 export 'package:karkhana/usersPages/vendorPages/Login_Register/Vlogin.dart';
 export 'package:karkhana/usersPages/vendorPages/Login_Register/forgetpw.dart';
+
+//Vendor Home Screens
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/recentAddedDeals.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/recentContainer.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/VAddDeals.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/vendorSettings.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/Vhome.dart';
+
+//Vendor Purchases Pages
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/VendorPurchases/activeVendorCoupon.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/VendorPurchases/activeVPurchases.dart';
+export 'package:karkhana/usersPages/vendorPages/HomeScreens/VendorPurchases/searchVendorCoupon.dart';
