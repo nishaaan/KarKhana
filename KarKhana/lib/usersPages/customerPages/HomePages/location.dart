@@ -106,7 +106,6 @@ class _askLocationState extends State<askLocation> {
                         // locationMessage =
                         //     'Latitude of Place:${position.latitude}, Longitude of Place:${position.longitude}';
                         getUserAddress(position);
-                        // ignore: use_build_context_synchronously
                         setState(() {});
                       },
                       icon: Icons.my_location_outlined,

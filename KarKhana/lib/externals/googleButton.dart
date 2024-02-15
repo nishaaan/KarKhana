@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, camel_case_types
+// ignore_for_file: file_names, camel_case_types, use_super_parameters, prefer_const_constructors_in_immutables
 
 import 'package:karkhana/Packages/Packages.dart';
 
@@ -7,7 +7,7 @@ class googleButton extends StatelessWidget {
   final String text;
   final VoidCallback onClick;
   final Color butColor;
-  const googleButton({
+  googleButton({
     Key? key,
     required this.image,
     required this.text,

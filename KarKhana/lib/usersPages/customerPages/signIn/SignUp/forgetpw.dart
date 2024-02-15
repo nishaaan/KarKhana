@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new, non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_new, non_constant_identifier_names, prefer_final_fields, annotate_overrides
 
 import 'package:karkhana/Packages/Packages.dart';
 

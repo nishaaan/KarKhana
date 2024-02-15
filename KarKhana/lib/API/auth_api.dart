@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names, avoid_print
+// ignore_for_file: non_constant_identifier_names, avoid_print, unused_local_variable, unnecessary_brace_in_string_interps, unnecessary_null_comparison
 
 import 'dart:convert';
 // import 'dart:ffi';

@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, non_constant_identifier_names, must_be_immutable, file_names, prefer_const_constructors, unnecessary_string_interpolations, unused_import
+// ignore_for_file: camel_case_types, non_constant_identifier_names, must_be_immutable, file_names, prefer_const_constructors, unnecessary_string_interpolations, unused_import, prefer_adjacent_string_concatenation
 
 import 'dart:io';
 

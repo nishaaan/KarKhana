@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, non_constant_identifier_names, file_names, use_key_in_widget_constructors, avoid_types_as_parameter_names, unnecessary_string_interpolations, prefer_const_constructors
+// ignore_for_file: must_be_immutable, non_constant_identifier_names, file_names, use_key_in_widget_constructors, avoid_types_as_parameter_names, unnecessary_string_interpolations, prefer_const_constructors, prefer_adjacent_string_concatenation
 
 import 'package:karkhana/Packages/Packages.dart';
 

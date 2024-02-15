@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, no_leading_underscores_for_local_identifiers, unnecessary_new, non_constant_identifier_names, prefer_const_constructors_in_immutables
+// ignore_for_file: camel_case_types, no_leading_underscores_for_local_identifiers, unnecessary_new, non_constant_identifier_names, prefer_const_constructors_in_immutables, unused_local_variable
 
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:http/http.dart' as http;

@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, use_super_parameters, prefer_const_constructors_in_immutables
 
 import 'package:karkhana/Packages/Packages.dart';
 
@@ -10,7 +10,7 @@ class ButtonContainer extends StatelessWidget {
   final Color butborderColor;
   final int width;
   final int height;
-  const ButtonContainer({
+  ButtonContainer({
     Key? key,
     required this.butborderColor,
     required this.text,

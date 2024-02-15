@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables
+// ignore_for_file: camel_case_types, prefer_const_constructors_in_immutables, file_names
 
 import 'package:karkhana/Packages/Packages.dart';
 // import 'package:brisk_deals/user_screens/Customer/Homescreens/settings/userSettings.dart';

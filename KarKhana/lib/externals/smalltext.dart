@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable, camel_case_types
+// ignore_for_file: must_be_immutable, camel_case_types, use_super_parameters
 import 'package:karkhana/Packages/Packages.dart';
 
 class smallText extends StatelessWidget {

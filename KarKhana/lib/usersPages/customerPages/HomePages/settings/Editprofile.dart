@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new, prefer_final_fields, file_names
+// ignore_for_file: unnecessary_new, prefer_final_fields, file_names, prefer_const_constructors, prefer_interpolation_to_compose_strings
 
 import 'package:karkhana/Packages/Packages.dart';
 

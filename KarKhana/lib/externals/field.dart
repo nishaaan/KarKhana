@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, use_super_parameters
 import 'package:karkhana/Packages/Packages.dart';
 
 class NtextField extends StatefulWidget {
