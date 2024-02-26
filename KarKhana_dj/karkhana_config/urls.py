@@ -11,5 +11,5 @@ urlpatterns = [
     path('accounts/', include('karkhana_app.urls')),
     path('all/', include('allauth.urls')),
     # path('api-auth/', include('rest_framework.urls')),
-    # path('account/',include('allauth.urls'))
+    path('account/',include('dj_rest_auth.urls'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

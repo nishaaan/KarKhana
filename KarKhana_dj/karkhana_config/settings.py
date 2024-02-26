@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-#*lj@34984fbi4aaj=jt*at82bn*2t#$zxbwz)30^6z=es*ox9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # local apps
     'karkhana_app.apps.KarkhanaAppConfig'
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -145,8 +147,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587  
-EMAIL_HOST_USER = 'getkarkhanadeals@gmail.com' #sender email
-EMAIL_HOST_PASSWORD = 'fzmihpuuxfcourzz' # password
+EMAIL_HOST_USER = 'karkhana2024@gmail.com' #sender email
+EMAIL_HOST_PASSWORD = 'vlwq bltm urnq fibe' # password
 
 #authentication through mail while logging in
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

@@ -7,7 +7,7 @@ class User(AbstractUser):
     type = ((1, 'Customer'),
             (2, 'Vendor'))
     user_type = models.IntegerField(choices=type, default= 1)
-    username = models.CharField(max_length=55, unique=False)
+    username = models.CharField(max_length=50, unique=False)
     full_name = models.CharField(max_length=50, blank=True)
     location = models.CharField(max_length=100, blank=True)
     phonenumber = models.CharField(max_length=100, blank=True)
