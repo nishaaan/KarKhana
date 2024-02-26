@@ -15,8 +15,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: SvgPicture.asset(
-        "assets/images/splashscreen.svg",
+      splash: Image.asset(
+        "assets/images/logo.png",
         height: 90.h,
         width: 200.w,
       ),

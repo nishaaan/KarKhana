@@ -29,13 +29,21 @@ class _UserLoginPageState extends State<UserLoginPage> {
             .push(MaterialPageRoute(builder: (context) => askLocation()));
       }
     } on PlatformException catch (e) {
-      print("Platform Exception $e");
+      print("Platform Exception");
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           duration: Duration(milliseconds: 1000),
           content: Text('Something went wrong')));
       print("Error is $e");
     }
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _UserEmail;
+    _UserPw;
+    super.initState();
   }
 
   @override
@@ -85,8 +93,8 @@ class _UserLoginPageState extends State<UserLoginPage> {
                           children: [
                             Padding(
                               padding: EdgeInsets.only(right: 10.w),
-                              child: SvgPicture.asset(
-                                "assets/images/logo.svg",
+                              child: Image.asset(
+                                "assets/images/logomain.png",
                                 height: 90.h,
                                 width: 90.w,
                               ),
@@ -100,7 +108,7 @@ class _UserLoginPageState extends State<UserLoginPage> {
                                     child: Row(
                                   children: [
                                     LargeText(
-                                      text: "Kar ",
+                                      text: "Kar",
                                       size: 24,
                                     ),
                                     LargeText(

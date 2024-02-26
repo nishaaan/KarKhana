@@ -70,8 +70,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               SizedBox(
                 height: 10.h,
               ),
-              SvgPicture.asset(
-                "assets/images/logo.svg",
+              Image.asset(
+                "assets/images/logomain.png",
                 height: 120.h,
                 width: 215.w,
               ),
@@ -109,17 +109,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               SizedBox(
                 height: 15.h,
               ),
-              // ButtonContainer(
-              //   text: 'Login as Vendor',
-              //   onClick: () {
-              //     Navigator.push(
-              //         context,
-              //         MaterialPageRoute(
-              //             builder: (context) => VendorLoginPage()));
-              //   },
-              //   butColor: Colours.secondaryColor,
-              //   butborderColor: Colours.secondaryColor,
-              // ),
+              ButtonContainer(
+                text: 'Login as Vendor',
+                onClick: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => VendorLoginPage()));
+                },
+                butColor: Colours.secondaryColor,
+                butborderColor: Colours.secondaryColor,
+              ),
             ],
           ),
         ),

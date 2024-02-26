@@ -1,13 +1,13 @@
-// ignore_for_file: non_constant_identifier_names, avoid_print, unused_local_variable, unnecessary_brace_in_string_interps, unnecessary_null_comparison
+// ignore_for_file: non_constant_identifier_names, avoid_print, unused_local_variable, unnecessary_brace_in_string_interps, unnecessary_null_comparison, unused_import
 
 import 'dart:convert';
-// import 'dart:ffi';
-// import 'dart:io';
+import 'dart:ffi';
+import 'dart:io';
 
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
-// import 'package:http_parser/http_parser.dart';
+import 'package:http_parser/http_parser.dart';
 
 Future<dynamic> userAuth(String email, String password) async {
   Map body = {"email": email, "password": password};
@@ -23,8 +23,7 @@ Future<dynamic> userAuth(String email, String password) async {
       String token = json['key'];
       var box = await Hive.openBox(tokenBox);
       box.put('token', token);
-      User? user = await getUser(token);
-      return user;
+      return await getUser(token);
     } else {
       Map json = jsonDecode(res.body);
       if (json.containsKey("email")) {
@@ -42,7 +41,6 @@ Future<dynamic> userAuth(String email, String password) async {
   }
 }
 
-//User details
 Future<User?> getUser(String token) async {
   var url = Uri.parse("$baseUrl/accounts/auth/user/");
   var res = await http.get(url, headers: {
