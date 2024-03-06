@@ -1,4 +1,5 @@
 // ignore_for_file: file_names, must_be_immutable, non_constant_identifier_names, camel_case_types, unused_local_variable
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class scrollDealdetail extends StatefulWidget {

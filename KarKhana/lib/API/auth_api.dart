@@ -10,51 +10,70 @@ import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 
 Future<dynamic> userAuth(String email, String password) async {
-  Map body = {"email": email, "password": password};
+  Map<String, String> body = {"email": email, "password": password};
   var url = Uri.parse("$baseUrl/accounts/auth/login/");
-  var res = await http.post(
-    url,
-    body: body,
-  );
 
   try {
+    var res = await http.post(
+      url,
+      body: body,
+    );
+
     if (res.statusCode == 200) {
-      Map json = jsonDecode(res.body);
+      Map<String, dynamic> json = jsonDecode(res.body);
       String token = json['key'];
       var box = await Hive.openBox(tokenBox);
       box.put('token', token);
       return await getUser(token);
     } else {
-      Map json = jsonDecode(res.body);
-      if (json.containsKey("email")) {
-        return json["email"][0];
-      }
-      if (json.containsKey("password")) {
-        return json["password"][0];
-      }
-      if (json.containsKey("non_field_errors")) {
-        return json["non_field_errors"][0];
-      }
+      // Handle error responses
+      return jsonDecode(res.body);
     }
   } catch (error) {
-    return error;
+    // Handle network errorsR
+    return error.toString();
   }
 }
 
 Future<User?> getUser(String token) async {
   var url = Uri.parse("$baseUrl/accounts/auth/user/");
-  var res = await http.get(url, headers: {
-    'Authorization': 'Token ${token}',
-  });
 
-  if (res.statusCode == 200 || res.statusCode == 201) {
-    var json = jsonDecode(res.body);
-    User user = User.fromJson(json);
-    user.token = token;
-    return user;
-  } else {
-    return null;
+  try {
+    var res = await http.get(url, headers: {
+      'Authorization': 'Token $token',
+    });
+
+    if (res.statusCode == 200 || res.statusCode == 201) {
+      print("Hello");
+      var json = jsonDecode(res.body);
+      User user = User.fromJson(json);
+      user.token = token;
+      user.is_user = 1;
+      print('email: ${user.email}');
+      print('User or not: ${user.runtimeType}');
+      // print('location: ${user.location}');
+      print('user_type: ${user.is_user}');
+      return user;
+    } else if (res.statusCode == 403) {
+      // Handle 403 Forbidden error
+      Fluttertoast.showToast(
+          msg: "You do not have permission to access this resource.",
+          fontSize: 18,
+          gravity: ToastGravity.BOTTOM,
+          backgroundColor: Colors.red,
+          textColor: Colors.white);
+    }
+  } catch (error) {
+    // Handle network errors
+    Fluttertoast.showToast(
+        msg: "An error occurred while fetching user data: $error",
+        fontSize: 18,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.red,
+        textColor: Colors.white);
   }
+
+  return null;
 }
 
 //REGISTER API
@@ -123,7 +142,6 @@ Future<dynamic> editProfile(String key, String name) async {
   var url = Uri.parse("$baseUrl/accounts/auth/user/");
   var res = await http.put(url,
       headers: {'Authorization': 'Token ${key}'}, body: body);
-
   print(res.body);
   print(res.statusCode);
 }
@@ -176,7 +194,7 @@ Future<VendorBusiness> getVendor(int pk) async {
   }
 }
 
-// post the vendor details to briskdeals
+// post the vendor details to KarKhana.
 
 Future<dynamic> postVendorBusinessDetails(
   int pk,

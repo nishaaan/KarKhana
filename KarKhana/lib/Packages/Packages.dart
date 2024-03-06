@@ -5,15 +5,18 @@ export 'package:flutter/material.dart';
 export 'package:flutter/services.dart';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
+export 'package:flutter/src/foundation/key.dart';
 export 'package:flutter/src/widgets/framework.dart';
 export 'package:flutter_svg/svg.dart';
 export 'package:hive_flutter/hive_flutter.dart';
 export 'package:lottie/lottie.dart';
 export 'package:page_transition/page_transition.dart';
+export 'package:curved_navigation_bar/curved_navigation_bar.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:flutter_rating_bar/flutter_rating_bar.dart';
 export 'package:geocoding/geocoding.dart';
 export 'package:geolocator/geolocator.dart';
+export 'package:google_nav_bar/google_nav_bar.dart';
 
 //KarKhana externals and models and validations
 export 'package:karkhana/models/user_models.dart';
@@ -31,7 +34,7 @@ export 'package:karkhana/externals/constant.dart';
 export 'package:karkhana/Validations/vaidateField.dart';
 
 //API
-export 'package:karkhana/API/auth_api.dart';
+// export 'package:karkhana/API/auth_api.dart';
 export 'package:karkhana/API/GoogleAPI.dart';
 
 //User signin/signup pages

@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, prefer_final_fields, non_constant_identifier_names, prefer_const_constructors, unused_local_variable
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class VendorSignUp extends StatefulWidget {

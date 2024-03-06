@@ -1,5 +1,6 @@
 // ignore_for_file: use_build_context_synchronously, prefer_const_constructors_in_immutables, unnecessary_new, non_constant_identifier_names, prefer_final_fields, avoid_print, prefer_const_constructors, invalid_use_of_visible_for_testing_member, invalid_use_of_protected_member
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class UserLoginPage extends StatefulWidget {
@@ -193,9 +194,11 @@ class _UserLoginPageState extends State<UserLoginPage> {
                                           ],
                                         ));
                               } else if (authResponse.runtimeType == User) {
+                                print("Hatti");
                                 User user = authResponse;
                                 context.read<UserCubit>().emit(user);
                                 if (user.is_user == 1) {
+                                  print("bromishe rando");
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(const SnackBar(
                                           backgroundColor: Colors.green,

@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_new, prefer_final_fields, file_names, prefer_const_constructors, prefer_interpolation_to_compose_strings
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class EditProfile extends StatefulWidget {
@@ -70,8 +71,10 @@ class _EditProfileState extends State<EditProfile> {
                       butColor: Colours.secondaryColor,
                       onClick: () async {
                         final isValidForm = _formKey.currentState!.validate();
-                        String id = user.token!;
-                        String name = fName.text + " " + lName.text;
+                        String fNameText = fName.text.trim();
+                        String lNameText = lName.text.trim();
+                        String name = fNameText + " " + lNameText;
+                        String id = user.token ?? "";
                         if (isValidForm) {
                           editProfile(id, name);
                           // ignore: use_build_context_synchronously

@@ -3,6 +3,7 @@
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:khalti_flutter/khalti_flutter.dart';
 import 'package:dcdg/dcdg.dart';
+import 'package:karkhana/API/auth_api.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized;

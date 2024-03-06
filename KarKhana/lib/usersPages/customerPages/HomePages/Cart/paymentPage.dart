@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable, file_names, non_constant_identifier_names, unnecessary_string_interpolations, prefer_adjacent_string_concatenation, prefer_interpolation_to_compose_strings
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:khalti_flutter/khalti_flutter.dart';
 

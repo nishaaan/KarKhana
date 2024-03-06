@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, file_names, prefer_final_fields, unnecessary_brace_in_string_interps, non_constant_identifier_names, unused_local_variable
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class SearchCoupon extends SearchDelegate {

@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 
 class mainDetailedDeals extends StatefulWidget {
