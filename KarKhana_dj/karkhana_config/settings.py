@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'karkhana_app',
+    #rest apps
     'rest_framework',
 
     #auth apps
@@ -40,7 +42,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
 
     # local apps
-    'karkhana_app.apps.KarkhanaAppConfig'
+    # 'karkhana_app.apps.KarkhanaAppConfig'
 ]
 
 SITE_ID = 1
@@ -51,9 +53,10 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'karkhana_config.urls'

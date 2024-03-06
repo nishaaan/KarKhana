@@ -9,12 +9,18 @@ from rest_framework import generics, status
 from django.core.mail import send_mail
 from .serializers import CartSerializer, ChargesSerializer, CouponItemsSerializer, DealsSerializer, EmailNotificationSerializer, NewRegisterSerializer, NewUserDetailsSerializer, ReviewsRatingsSerializer, VendorBusinessDetailsSerializer, VendorRegisterSerializer, VendorRequestSerializer, FeedbackSerializer
 
-
 # view for registered user details
 class userDetails(UserDetailsView):
     queryset = User.objects.all()
     serializer_class = NewUserDetailsSerializer
 
+# class UserDetailView(APIView):
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request):
+#         user = request.user
+#         serializer = NewUserDetailsSerializer(user)
+#         return Response(serializer.data)
 # view for vendor registration process
 class vendorForm(generics.ListCreateAPIView):
     queryset = VendorRequest.objects.all()

@@ -1,6 +1,7 @@
 from dj_rest_auth.registration.views import VerifyEmailView
 from django.contrib import admin
 from django.urls import path,include
+from . import views
 from karkhana_app.views import CartDelete, CartGetCreate, CartListByUser, ChargesView, ChargesViewAll, CouponItemsViews, CouponListByUser, CouponListByVendor, CouponUpdate, CustomerRegistrationView, DealsGCUView, DealsView, ReviewRatingViews, ReviewsRatingsByBusiness, TodoGetCreate, TodoUpdateDelete, VendorRegistrationView, vendorForm, SendEmailNotification, FeedbackView  #GoogleLogin
 
 
@@ -9,6 +10,10 @@ urlpatterns = [
     path('auth/',include('dj_rest_auth.urls')),
     path('auth/registration/',include('dj_rest_auth.registration.urls')),
     path('auth/confirm-email/', VerifyEmailView.as_view(), name='account_email_verification_sent'),
+    # path('auth/user/', UserDetailView.as_view(), name='user_detail'),
+
+    # path('accounts/auth/login/', views.login_view, name='login'),
+    # path('accounts/auth/user/', views.user_details_view, name='user-details'),
     
     
     # for registeration of vendor and customer

@@ -14,8 +14,8 @@ class User(AbstractUser):
     vendor_about = models.TextField(blank=True)
     vendor_opening_days = models.CharField(max_length=12, blank=True)
     vendor_opening_time = models.CharField(max_length=12, blank=True)
-    groups = models.ManyToManyField(Group, related_name='karkhana_users')
-    user_permissions = models.ManyToManyField(Permission, related_name='karkhana_users_permissions')
+    # groups = models.ManyToManyField(Group, related_name='karkhana_users')
+    # user_permissions = models.ManyToManyField(Permission, related_name='karkhana_users_permissions')
     
     def __str__(self):
         return self.full_name
