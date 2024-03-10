@@ -87,6 +87,7 @@ class SendEmailNotification(generics.CreateAPIView):
         
 
 class DealsView(generics.ListCreateAPIView):
+        
         queryset = Deals.objects.all()
         serializer_class = DealsSerializer
 
