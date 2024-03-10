@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
                             }
                           }));
                 },
-                publicKey: 'test_public_key_55b3b98743124d9d80ddb0bffa822a6f',
+                publicKey: '9177f40552c24af78a470410b37f3ac5',
               ),
             ));
   }

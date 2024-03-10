@@ -51,7 +51,7 @@ Future<User?> getUser(String token) async {
       user.is_user = 1;
       print('email: ${user.email}');
       print('User or not: ${user.runtimeType}');
-      // print('location: ${user.location}');
+      print('location: ${user.location}');
       print('user_type: ${user.is_user}');
       return user;
     } else if (res.statusCode == 403) {
