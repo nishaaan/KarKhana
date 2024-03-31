@@ -36,7 +36,7 @@ Future<dynamic> userAuth(String email, String password) async {
 }
 
 Future<User?> getUser(String token) async {
-  var url = Uri.parse("$baseUrl/accounts/auth/user/");
+  var url = Uri.parse("$baseUrl/accounts/auth/details/");
 
   try {
     var res = await http.get(url, headers: {
@@ -48,7 +48,6 @@ Future<User?> getUser(String token) async {
       var json = jsonDecode(res.body);
       User user = User.fromJson(json);
       user.token = token;
-      user.is_user = 1;
       print('email: ${user.email}');
       print('User or not: ${user.runtimeType}');
       print('location: ${user.location}');
@@ -128,7 +127,7 @@ Future<dynamic> registerUser(
 //adding location to user information
 Future<dynamic> addLocation(String key, String address) async {
   Map body = {"location": address};
-  var url = Uri.parse("$baseUrl/accounts/auth/user/");
+  var url = Uri.parse("$baseUrl/accounts/auth/details/");
   var res = await http.put(url,
       headers: {'Authorization': 'Token ${key}'}, body: body);
 
@@ -173,7 +172,7 @@ Future<dynamic> VendorRequestRegister(
     "vendor_opening_days": opening_days,
     "vendor_opening_time": opening_time,
   };
-  var url = Uri.parse("$baseUrl/accounts/unverifiedVendor/");
+  var url = Uri.parse("$baseUrl/accounts/registration/vendor/");
   var res = await http.post(url, body: data);
   print(res.body);
 }

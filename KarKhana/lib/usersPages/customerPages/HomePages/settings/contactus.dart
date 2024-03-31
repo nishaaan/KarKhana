@@ -93,7 +93,7 @@ class ContactUs extends StatelessWidget {
                         size: 25,
                       ),
                       smallText(
-                        text: "getkarkhana@gmail.com",
+                        text: "karkhana2024@gmail.com",
                         size: 20,
                       )
                     ],

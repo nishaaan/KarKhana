@@ -33,13 +33,16 @@ INSTALLED_APPS = [
     'rest_framework',
 
     #auth apps
+    'allauth',
     'rest_framework.authtoken',
     'dj_rest_auth',
-    'allauth',
+    
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'dj_rest_auth.registration',
+    
+    
 
     # local apps
     # 'karkhana_app.apps.KarkhanaAppConfig'
@@ -53,9 +56,10 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+    'allauth.account.middleware.AccountMiddleware', 
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
     
 ]
 

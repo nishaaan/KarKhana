@@ -19,6 +19,8 @@ class _VendorSignUpState extends State<VendorSignUp> {
   TextEditingController _VendorAbout = TextEditingController();
   TextEditingController _VendorOpeningDays = TextEditingController();
   TextEditingController _VendorOpeningTime = TextEditingController();
+  TextEditingController _UserPw = TextEditingController();
+  TextEditingController _UserPwConfirm = TextEditingController();
 
   @override
   void initState() {
@@ -30,6 +32,8 @@ class _VendorSignUpState extends State<VendorSignUp> {
     _VendorAbout;
     _VendorOpeningDays;
     _VendorOpeningTime;
+    _UserPw;
+    _UserPwConfirm;
     super.initState();
   }
 
@@ -185,6 +189,28 @@ class _VendorSignUpState extends State<VendorSignUp> {
                           name: 'Opening Time',
                           prefix: const Icon(Icons.watch_later_outlined),
                           validator: ValidationOfFields.valField,
+                        ),
+                        SizedBox(
+                          height: 25.h,
+                        ),
+                        NtextField(
+                          controller: _UserPw,
+                          name: 'Password',
+                          obsecure: true,
+                          prefix: const Icon(Icons.lock_outline),
+                          isPassword: true,
+                          validator: ValidationOfFields.valPassword,
+                        ),
+                        SizedBox(
+                          height: 25.h,
+                        ),
+                        NtextField(
+                          controller: _UserPwConfirm,
+                          name: 'Confirm Password',
+                          obsecure: true,
+                          prefix: const Icon(Icons.lock_outline),
+                          isPassword: true,
+                          validator: ValidationOfFields.valPassword,
                         ),
                         SizedBox(
                           height: 25.h,

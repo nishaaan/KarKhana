@@ -41,7 +41,6 @@ class _UserLoginPageState extends State<UserLoginPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _UserEmail;
     _UserPw;
     super.initState();
@@ -198,7 +197,6 @@ class _UserLoginPageState extends State<UserLoginPage> {
                                 User user = authResponse;
                                 context.read<UserCubit>().emit(user);
                                 if (user.is_user == 1) {
-                                  print("bromishe rando");
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(const SnackBar(
                                           backgroundColor: Colors.green,

@@ -1,3 +1,5 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
+    "emulator.emulatorPathWindows": "",
+    "cmake.configureOnOpen": false,
 }

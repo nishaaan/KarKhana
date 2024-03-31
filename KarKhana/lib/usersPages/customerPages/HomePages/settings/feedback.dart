@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_new, prefer_final_fields
+// ignore_for_file: unnecessary_new, prefer_final_fields, use_build_context_synchronously
 
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
@@ -74,7 +74,6 @@ class _SendFeedbackState extends State<SendFeedback> {
                             if (isValidForm) {
                               await sendFeedback(id, id, userMessage.text,
                                   "${user.email}", "${user.name}");
-                              // ignore: use_build_context_synchronously
                               showDialog(
                                 context: context,
                                 builder: (context) {
