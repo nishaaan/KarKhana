@@ -326,7 +326,7 @@ class _PaymentPageState extends State<PaymentPage> {
         sendPurchaseEmail(
             "Your Purchase for " +
                 "${widget.Deals_Title}" +
-                "is completed. Enjoy!",
+                " is completed. Enjoy!",
             user.email!);
         setState(() {});
       },
@@ -381,33 +381,33 @@ class _PaymentPageState extends State<PaymentPage> {
     );
   }
 
-//   void onSuccess(PaymentSuccessModel success) {
-//     showDialog(
-//       context: context,
-//       builder: (context) {
-//         return AlertDialog(
-//           title: const Text("Payment successfull"),
-//           actions: [
-//             SimpleDialogOption(
-//               child: const Text("Ok"),
-//               onPressed: () {
-//                 Navigator.pop(context);
-//                 setState(() {
-//                   //referenceID = success.idx;
-//                 });
-//               },
-//             )
-//           ],
-//         );
-//       },
-//     );
-//   }
+  // void onSuccess(PaymentSuccessModel success) {
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) {
+  //       return AlertDialog(
+  //         title: const Text("Payment successfull"),
+  //         actions: [
+  //           SimpleDialogOption(
+  //             child: const Text("Ok"),
+  //             onPressed: () {
+  //               Navigator.pop(context);
+  //               setState(() {
+  //                 //referenceID = success.idx;
+  //               });
+  //             },
+  //           )
+  //         ],
+  //       );
+  //     },
+  //   );
+  // }
 
-//   void onFailure(PaymentFailureModel failure) {
-//     debugPrint(failure.toString());
-//   }
+  // void onFailure(PaymentFailureModel failure) {
+  //   debugPrint(failure.toString());
+  // }
 
-//   void onCancel() {
-//     debugPrint("cancelled");
-//   }
+  // void onCancel() {
+  //   debugPrint("cancelled");
+  // }
 }

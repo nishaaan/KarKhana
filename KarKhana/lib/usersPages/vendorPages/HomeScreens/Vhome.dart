@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors_in_immutables, sized_box_for_whitespace, prefer_const_constructors, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names, use_super_parameters, prefer_const_constructors_in_immutables, unnecessary_string_escapes, use_key_in_widget_constructors, use_build_context_synchronously, non_constant_identifier_names, sized_box_for_whitespace
 
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
@@ -34,7 +34,7 @@ class _VendorHomePageState extends State<VendorHomePage> {
                       Padding(
                         padding: EdgeInsets.only(top: 10.h),
                         child: LargeText(
-                          text: "KarKhana",
+                          text: "BriskDeals",
                           color: Colours.secondaryColor,
                         ),
                       ),
@@ -259,7 +259,6 @@ class _VendorHomePageState extends State<VendorHomePage> {
                               BusinessOpenTime,
                             );
                             if (authResponse.runtimeType == String) {
-                              // ignore: use_build_context_synchronously
                               showDialog(
                                   context: context,
                                   builder: (BuildContext context) =>
@@ -280,7 +279,6 @@ class _VendorHomePageState extends State<VendorHomePage> {
                                         ],
                                       ));
                             } else {
-                              // ignore: use_build_context_synchronously
                               showDialog(
                                   context: context,
                                   builder: (BuildContext context) =>
@@ -290,7 +288,7 @@ class _VendorHomePageState extends State<VendorHomePage> {
                                           size: 16,
                                         ),
                                         content: const Text(
-                                          "Your Business information has already been uploaded to KarKhana system.",
+                                          "Your Business information has already been uploaded to BriskDeals system.",
                                         ),
                                         actions: [
                                           TextButton(
