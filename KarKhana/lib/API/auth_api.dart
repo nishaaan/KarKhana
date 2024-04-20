@@ -172,7 +172,7 @@ Future<dynamic> VendorRequestRegister(
     "vendor_opening_days": opening_days,
     "vendor_opening_time": opening_time,
   };
-  var url = Uri.parse("$baseUrl/accounts/registration/vendor/");
+  var url = Uri.parse("$baseUrl/accounts/unverifiedVendor/");
   var res = await http.post(url, body: data);
   print(res.body);
 }

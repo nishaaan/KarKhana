@@ -118,7 +118,7 @@ class _VendorAddDealsState extends State<VendorAddDeals> {
             builder: (BuildContext context) => AlertDialog(
                   title: LargeText(text: 'Deal Success'),
                   content: const Text(
-                    "Deal has been successfully added in BriskDeals system.",
+                    "Deal has been successfully added in KarKhana system.",
                   ),
                   actions: [
                     TextButton(

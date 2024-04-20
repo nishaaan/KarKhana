@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_final_fields, non_constant_identifier_names, prefer_const_constructors, unused_local_variable
+// ignore_for_file: file_names, prefer_final_fields, non_constant_identifier_names, prefer_const_constructors, unused_local_variable, use_build_context_synchronously
 
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
@@ -232,7 +232,6 @@ class _VendorSignUpState extends State<VendorSignUp> {
                                 _VendorOpeningDays.text,
                                 _VendorOpeningTime.text,
                               );
-                              // ignore: use_build_context_synchronously
                               showDialog(
                                   context: context,
                                   builder: (BuildContext context) =>
@@ -258,6 +257,8 @@ class _VendorSignUpState extends State<VendorSignUp> {
                                 _VendorAbout.clear();
                                 _VendorOpeningDays.clear();
                                 _VendorOpeningTime.clear();
+                                _UserPw.clear();
+                                _UserPwConfirm.clear();
                               });
                             }
                           },
@@ -304,6 +305,8 @@ class _VendorSignUpState extends State<VendorSignUp> {
     _VendorName.dispose();
     _VendorPhone.dispose();
     _VendorLocation.dispose();
+    _UserPw.dispose();
+    _UserPwConfirm.dispose();
     super.dispose();
   }
 }

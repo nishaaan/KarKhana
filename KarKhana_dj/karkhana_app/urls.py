@@ -16,7 +16,7 @@ urlpatterns = [
     # path('accounts/auth/user/', views.user_details_view, name='user-details'),
     
     
-    # for registeration of vendor and customer
+    # for registration of vendor and customer
     path('registration/customer/', CustomerRegistrationView.as_view(), name = 'Customer Register' ),
     path('registration/vendor/', VendorRegistrationView.as_view(), name = 'Vendor Register' ),
     

@@ -34,7 +34,7 @@ class _VendorHomePageState extends State<VendorHomePage> {
                       Padding(
                         padding: EdgeInsets.only(top: 10.h),
                         child: LargeText(
-                          text: "BriskDeals",
+                          text: "KarKhana",
                           color: Colours.secondaryColor,
                         ),
                       ),
@@ -268,7 +268,7 @@ class _VendorHomePageState extends State<VendorHomePage> {
                                           size: 16,
                                         ),
                                         content: const Text(
-                                          "Your Business information has been successfully uploaded to BriskDeals system.",
+                                          "Your Business information has been successfully uploaded to KarKhana system.",
                                         ),
                                         actions: [
                                           TextButton(
@@ -288,7 +288,7 @@ class _VendorHomePageState extends State<VendorHomePage> {
                                           size: 16,
                                         ),
                                         content: const Text(
-                                          "Your Business information has already been uploaded to BriskDeals system.",
+                                          "Your Business information has already been uploaded to KarKhana system.",
                                         ),
                                         actions: [
                                           TextButton(
