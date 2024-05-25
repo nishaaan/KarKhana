@@ -18,7 +18,8 @@ urlpatterns = [
     
     # for registration of vendor and customer
     path('registration/customer/', CustomerRegistrationView.as_view(), name = 'Customer Register' ),
-    path('registration/vendor/', VendorRegistrationView.as_view(), name = 'Vendor Register' ),
+    # path('registration/vendor/', VendorRegistrationView.as_view(), name = 'Vendor Register' ),
+    path('registration/vendors/', VendorRegistrationView.as_view(), name = 'Vendor Register' ),
     
     
     

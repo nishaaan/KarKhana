@@ -37,6 +37,8 @@ class VendorRegisterSerializer(RegisterSerializer):
     vendor_about = serializers.CharField()
     vendor_opening_days = serializers.CharField()
     vendor_opening_time = serializers.CharField()
+    password1 = serializers.CharField()
+    password2 = serializers.CharField()
     
     def custom_signup(self, request, user):
         user.user_type = 2
@@ -50,6 +52,19 @@ class VendorRegisterSerializer(RegisterSerializer):
         
 class NewLoginSerializer(LoginSerializer):
     pass
+
+
+# class ProductSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Product
+#         fields = '__all__'
+
+# class SaleSerializer(serializers.ModelSerializer):
+#     product = ProductSerializer()
+
+#     class Meta:
+#         model = Sale
+#         fields = '__all__'
 
 
 class EmailNotificationSerializer(serializers.ModelSerializer):
