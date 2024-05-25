@@ -193,7 +193,6 @@ class _UserLoginPageState extends State<UserLoginPage> {
                                           ],
                                         ));
                               } else if (authResponse.runtimeType == User) {
-                                print("Hatti");
                                 User user = authResponse;
                                 context.read<UserCubit>().emit(user);
                                 if (user.is_user == 1) {

@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'dart:ffi';
 import 'dart:io';
-
+import 'package:multi_select_flutter/multi_select_flutter.dart';
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:dropdownfield2/dropdownfield2.dart';
 import 'package:image_picker/image_picker.dart';
@@ -114,6 +114,7 @@ class _VendorAddDealsState extends State<VendorAddDeals> {
         });
         // ignore: use_build_context_synchronously
         return showDialog(
+            // ignore: use_build_context_synchronously
             context: context,
             builder: (BuildContext context) => AlertDialog(
                   title: LargeText(text: 'Deal Success'),
@@ -433,10 +434,45 @@ class _VendorAddDealsState extends State<VendorAddDeals> {
                         SizedBox(
                           height: 20.h,
                         ),
-                        NtextField(
-                            controller: _dealapplicableday,
-                            name: "Deal applicable day",
-                            validator: ValidationOfFields.valField),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Applicable Days',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            MultiSelectDialogField(
+                              items: [
+                                'Sunday',
+                                'Monday',
+                                'Tuesday',
+                                'Wednesday',
+                                'Thursday',
+                                'Friday',
+                                'Saturday'
+                              ]
+                                  .map((day) =>
+                                      MultiSelectItem<String>(day, day))
+                                  .toList(),
+                              listType: MultiSelectListType.CHIP,
+                              selectedColor: Colours.greenColor,
+                              unselectedColor: Colors.grey[300],
+                              selectedItemsTextStyle:
+                                  TextStyle(color: Colors.white),
+                              onConfirm: (List<String> selected) {
+                                setState(() {
+                                  _dealapplicableday.text = selected.join(', ');
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 25.h,
+                        ),
                         SizedBox(
                           height: 20.h,
                         ),

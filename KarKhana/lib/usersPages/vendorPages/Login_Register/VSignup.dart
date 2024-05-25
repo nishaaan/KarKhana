@@ -2,6 +2,9 @@
 
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
+import 'package:multi_select_flutter/multi_select_flutter.dart';
+
+import 'package:karkhana/usersPages/vendorPages/HomeScreens/splashscreen.dart';
 
 class VendorSignUp extends StatefulWidget {
   const VendorSignUp({super.key});
@@ -175,11 +178,41 @@ class _VendorSignUpState extends State<VendorSignUp> {
                         SizedBox(
                           height: 25.h,
                         ),
-                        NtextField(
-                          controller: _VendorOpeningDays,
-                          name: 'Opening days',
-                          prefix: const Icon(Icons.calendar_month_outlined),
-                          validator: ValidationOfFields.valField,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Opening Days',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            MultiSelectDialogField(
+                              items: [
+                                'Sunday',
+                                'Monday',
+                                'Tuesday',
+                                'Wednesday',
+                                'Thursday',
+                                'Friday',
+                                'Saturday'
+                              ]
+                                  .map((day) =>
+                                      MultiSelectItem<String>(day, day))
+                                  .toList(),
+                              listType: MultiSelectListType.CHIP,
+                              selectedColor: Colours.greenColor,
+                              unselectedColor: Colors.grey[300],
+                              selectedItemsTextStyle:
+                                  TextStyle(color: Colors.white),
+                              onConfirm: (List<String> selected) {
+                                setState(() {
+                                  _VendorOpeningDays.text = selected.join(', ');
+                                });
+                              },
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 25.h,
@@ -187,8 +220,20 @@ class _VendorSignUpState extends State<VendorSignUp> {
                         NtextField(
                           controller: _VendorOpeningTime,
                           name: 'Opening Time',
-                          prefix: const Icon(Icons.watch_later_outlined),
+                          prefix: const Icon(Icons.access_time),
                           validator: ValidationOfFields.valField,
+                          ontap: () async {
+                            final pickedTime = await showTimePicker(
+                              context: context,
+                              initialTime: TimeOfDay.now(),
+                            );
+                            if (pickedTime != null) {
+                              setState(() {
+                                _VendorOpeningTime.text =
+                                    pickedTime.format(context);
+                              });
+                            }
+                          },
                         ),
                         SizedBox(
                           height: 25.h,
@@ -231,35 +276,63 @@ class _VendorSignUpState extends State<VendorSignUp> {
                                 _VendorAbout.text,
                                 _VendorOpeningDays.text,
                                 _VendorOpeningTime.text,
+                                _UserPw.text,
+                                _UserPwConfirm.text,
                               );
-                              showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) =>
-                                      AlertDialog(
-                                        title: LargeText(
-                                            text: 'Registration Submitted'),
-                                        content: const Text(
-                                          "Your Business data has successfully submitted in KarKhana. We will be in contact with you in few days for further registration process. Please don't lose your contact information that you have just submitted!",
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                              onPressed: () {
-                                                Navigator.pop(context);
-                                              },
-                                              child: const Text('Close'))
-                                        ],
-                                      ));
-                              setState(() {
-                                _VendorName.clear();
-                                _VendorEmail.clear();
-                                _VendorPhone.clear();
-                                _VendorLocation.clear();
-                                _VendorAbout.clear();
-                                _VendorOpeningDays.clear();
-                                _VendorOpeningTime.clear();
-                                _UserPw.clear();
-                                _UserPwConfirm.clear();
-                              });
+
+                              if (authResponse.runtimeType == String) {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                          title: const Text('Invalid Input'),
+                                          content: Text(
+                                            authResponse,
+                                          ),
+                                          actions: [
+                                            TextButton(
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: const Text('Close'))
+                                          ],
+                                        ));
+                              } else {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                          title: const Text(
+                                              'Registration Submitted'),
+                                          content: const Text(
+                                            "Your business data has been successfully submitted. We will contact you in a few days for further registration steps. Please keep your contact information safe!",
+                                          ),
+                                          actions: [
+                                            TextButton(
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                      return LoadingSplashScreen();
+                                                    }),
+                                                  );
+                                                },
+                                                child: const Text('Close'))
+                                          ],
+                                        ));
+                                setState(() {
+                                  _VendorName.clear();
+                                  _VendorEmail.clear();
+                                  _VendorPhone.clear();
+                                  _VendorLocation.clear();
+                                  _VendorAbout.clear();
+                                  _VendorOpeningDays.clear();
+                                  _VendorOpeningTime.clear();
+                                  _UserPw.clear();
+                                  _UserPwConfirm.clear();
+                                });
+                              }
                             }
                           },
                         ),

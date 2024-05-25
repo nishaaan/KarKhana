@@ -154,27 +154,42 @@ Future<void> logOutUser(String token) async {
 }
 
 //Vendor details send to admin for registration process
+
 Future<dynamic> VendorRequestRegister(
-  String business_name,
+  String fullName,
   String email,
-  String phone,
+  String phoneNumber,
   String location,
   String about,
-  String opening_days,
-  String opening_time,
+  String openingDays,
+  String openingTime,
+  String password,
+  String confirmPassword,
 ) async {
   Map<String, dynamic> data = {
-    "vendor_email": email,
-    "vendor_BusinessName": business_name,
-    "vendor_phoneNumber": phone,
-    "vendor_Location": location,
+    "email": email,
+    "full_name": fullName,
+    "phonenumber": phoneNumber,
+    "location": location,
     "vendor_about": about,
-    "vendor_opening_days": opening_days,
-    "vendor_opening_time": opening_time,
+    "vendor_opening_days": openingDays,
+    "vendor_opening_time": openingTime,
+    "password1": password,
+    "password2": confirmPassword,
   };
-  var url = Uri.parse("$baseUrl/accounts/unverifiedVendor/");
-  var res = await http.post(url, body: data);
-  print(res.body);
+
+  var url = Uri.parse("$baseUrl/accounts/registration/vendors/");
+  var headers = {"Content-Type": "application/json"};
+
+  var res = await http.post(url, headers: headers, body: jsonEncode(data));
+  print('Status Code: ${res.statusCode}');
+  print('Response Body: ${res.body}');
+
+  if (res.statusCode == 200 || res.statusCode == 201) {
+    return jsonDecode(res.body);
+  } else {
+    throw Exception('Failed to register vendor');
+  }
 }
 
 //get a specific vendor detail from database
@@ -475,7 +490,7 @@ Future<void> deleteCart(int id, int UserID) async {
 // Coupon Price = Price * (1 - Discount %) * Coupon Rate %
 
 Future<Charges?> ChargesData() async {
-  String PK = "1";
+  String PK = "2";
   const String api = '$baseUrl/accounts/Charges/';
   var res = await http.get(Uri.parse(api + PK));
   print(res.statusCode);

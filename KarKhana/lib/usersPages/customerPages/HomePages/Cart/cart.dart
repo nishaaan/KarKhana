@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names, unused_local_variable
+// ignore_for_file: non_constant_identifier_names, unused_local_variable, prefer_typing_uninitialized_variables
 
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';

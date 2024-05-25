@@ -1,5 +1,4 @@
-// ignore_for_file: must_be_immutable, file_names, non_constant_identifier_names, unnecessary_string_interpolations, prefer_adjacent_string_concatenation, prefer_interpolation_to_compose_strings
-
+// ignore_for_file: must_be_immutable, file_names, non_constant_identifier_names, unnecessary_string_interpolations, prefer_adjacent_string_concatenation, prefer_interpolation_to_compose_strings, avoid_print
 import 'package:karkhana/API/auth_api.dart';
 import 'package:karkhana/Packages/Packages.dart';
 import 'package:khalti_flutter/khalti_flutter.dart';
@@ -54,6 +53,7 @@ class _PaymentPageState extends State<PaymentPage> {
   late String user_location;
   late String user_phone;
   late User user;
+
   @override
   Widget build(BuildContext context) {
     user = context.read<UserCubit>().state;
@@ -326,7 +326,7 @@ class _PaymentPageState extends State<PaymentPage> {
         sendPurchaseEmail(
             "Your Purchase for " +
                 "${widget.Deals_Title}" +
-                " is completed. Enjoy!",
+                "is completed. Enjoy!",
             user.email!);
         setState(() {});
       },
